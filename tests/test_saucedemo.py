@@ -22,14 +22,14 @@ def driver():
     driver.quit()
 
 
-#def test_login(driver):
+def test_login(driver):
     login_saucedemo(driver)                         # iniciamos secion
     assert "inventory.html" in driver.current_url   # verificamos la url del catalogo sea correcto
     titulo = driver.find_element(By.CSS_SELECTOR, 'Div.header_secondary_container .title').text
     assert titulo == 'Products'
 
 
-#def test_catalogo(driver):
+def test_catalogo(driver):
     login_saucedemo(driver)
 
     products = driver.find_elements(By.CLASS_NAME, 'inventory_item')
